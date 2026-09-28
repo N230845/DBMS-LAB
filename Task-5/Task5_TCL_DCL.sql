@@ -91,8 +91,11 @@ SHOW GRANTS FOR 'susmitha'@'localhost';
 REVOKE UPDATE ON Developers FROM 'susmitha'@'localhost';
 SHOW GRANTS FOR 'susmitha'@'localhost';
 -- 6
-START TRANSACTION;
-UPDATE Apps SET Rating=0 WHERE AppName='Google Keep';
+INSERT INTO Apps VALUES(1011,'Google Drive',103,202,301,4.6,1000000,0.00);
+SELECT * FROM Apps;
+UPDATE Apps SET Rating=0 WHERE AppName='Google Drive';
+SELECT * FROM Apps;
+DELETE FROM Apps WHERE AppID=1011;
 COMMIT;
 SELECT * FROM Apps;
 -- 7
