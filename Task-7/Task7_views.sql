@@ -3,13 +3,16 @@ SELECT * FROM Developers;
 SELECT * FROM Publishers;
 SELECT * FROM Categories;
 SELECT * FROM Apps;
--- Level 0
+-- Level 1
 -- 1
 CREATE VIEW application_records_4 AS SELECT AppID,AppName,Rating,Price FROM Apps;
+SELECT * FROM application_records;
 -- 3
 CREATE VIEW highly_rated_applications AS SELECT AppID, AppName,Rating FROM Apps WHERE Rating>=4.5;
+SELECT * FROM highly_rated_applications;
 -- 4
 CREATE VIEW free_apps AS SELECT AppName,Price FROM apps WHERE Price=0;
+SELECT * FROM free_apps;
 -- 5
 SELECT * FROM highly_rated_applications;
 -- 6
